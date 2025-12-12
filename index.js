@@ -1,5 +1,5 @@
-// vulnerable example
-function runUserCode(code) {
-  eval(code); // potential security issue
+function runUserCode(input) {
+  eval(input);  // CWE-94: Code Injection vulnerability
 }
-runUserCode("console.log('hi')");
+
+runUserCode("console.log('Injected')");
